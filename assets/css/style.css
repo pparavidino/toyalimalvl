@@ -779,12 +779,17 @@ body:not(.no-custom-cursor) .username{ cursor: none; }
 @media (max-width: 780px){
   .profile{
     flex-direction: column;
-    gap: 8px;
-    padding: 10px 20px 20px;
+    gap: 0;
+    padding: 4px 20px 12px;
   }
-  .profile-center{ order: 2; width: auto; margin: 10px 0; }
+  .profile-card{ padding: 18px 0; }
+  .profile-center{ order: 2; width: auto; margin: 0; }
   .profile-card.left{ order: 1; }
-  .profile-card.right{ order: 3; }
+  .profile-card.right{
+    order: 3;
+    border-top: 1px solid var(--line);
+    margin-top: 4px;
+  }
   .avatar-ring{
     width: clamp(120px, 34vw, 160px);
     height: clamp(120px, 34vw, 160px);
@@ -793,6 +798,7 @@ body:not(.no-custom-cursor) .username{ cursor: none; }
   .double-heart{ width: 50px; height: 50px; }
   .double-heart .heart{ font-size: 38px; }
   .heart-purple{ left: 10px; top: 6px; }
+  .tagline{ margin-bottom: 4px; }
 }
 
 @media (max-width: 560px){
