@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>toyalimalvl — diário visual</title>
+<meta name="description" content="céu azul, sol na pele, planos aleatórios e pequenas memórias.">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- ============================================================
+       CURSOR REFINADO
+       Ponto customizado que segue o mouse. Desativado em telas
+       de toque via JS (ver main.js). Puramente decorativo —
+       não interfere na navegação por teclado ou leitores de tela.
+       ============================================================ -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       TEXTURA AMBIENTE
+       Film grain + luz suave, camadas fixas, não bloqueiam clique.
+       ============================================================ -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+  <div class="light-veil" aria-hidden="true"></div>
+
+  <!-- ============ LOADING ============ -->
+  <div id="loading">
+    <div class="loading-mark"></div>
+    <p class="loading-text">reunindo memórias...</p>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header">
+    <span class="eyebrow">diário visual</span>
+    <nav class="header-nav" aria-label="seções do diário">
+      <a href="#timeline">nós</a>
+      <a href="#mural">momentos</a>
+      <a href="#song">nossa música</a>
+    </nav>
+    <span class="mark"><span class="dot"></span>rio de janeiro</span>
+  </header>
+
+  <!-- ============ PERFIL ============ -->
+<section class="profile">
+
+    <div class="profile-card left">
+
+        <div class="avatar-ring">
+            <div class="avatar-inner">
+                <img src="assets/images/5.jpeg" alt="Letícia">
+            </div>
+        </div>
+
+        <h1 class="username">toyalimalvl</h1>
+
+        <p class="tagline">
+            céu azul,<br>
+            sol na pele,<br>
+            pequenas memórias.
+        </p>
+
+    </div>
+
+    <div class="profile-center">
+
+    <div class="double-heart">
+        <span class="heart heart-blue">♡</span>
+        <span class="heart heart-purple">♡</span>
+    </div>
+
+</div>
+
+    <div class="profile-card right">
+
+        <div class="avatar-ring">
+            <div class="avatar-inner">
+                <img src="assets/images/avatarpedro.png" alt="Pedro">
+            </div>
+        </div>
+
+        <h1 class="username">pedro</h1>
+
+        <p class="tagline">
+            códigos,<br>
+            café,<br>
+            ela.
+        </p>
+
+    </div>
+
+</section>
+
+  <!-- ============================================================
+       TIMELINE — "nós"
+       Uma linha do tempo enxuta, guiada por uma régua vertical azul.
+       ============================================================ -->
+  <section class="timeline-section" id="timeline">
+    <p class="section-eyebrow">a nossa linha do tempo</p>
+
+    <ol class="timeline">
+      <li class="timeline-item">
+        <span class="timeline-year">2026</span>
+        <p class="timeline-text">Nos conhecemos.</p>
+      <li class="timeline-item timeline-item--now">
+        <span class="timeline-year">hoje</span>
+        <p class="timeline-text">História sendo escrita.....</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============================================================
+       MURAL
+       Para adicionar uma foto nova, basta colar:
+         <div class="post"><img src="assets/images/00X.jpg"></div>
+       O layout se reorganiza sozinho.
+
+       As fotos dela e as fotos "nós" convivem no mesmo mural —
+       a separação é sutil, marcada apenas por um pequeno divisor
+       de seção (.mural-divider) e, nas fotos "nós", por um selo
+       discreto no canto (.post--us).
+       ============================================================ -->
+  <main class="mural" id="mural">
+
+    <div class="mural-divider">
+      <span>momentos dela</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/6.jpeg" alt="" loading="lazy">
+      <p class="post-caption"></p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">cor favorita dela</span>
+      <span class="card-value">azul</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/7.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post">
+      <img src="assets/images/8.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post card">
+      <span class="card-label">lugar favorito</span>
+      <span class="card-value">a praia</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/9.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post quote">
+      <p>alguns momentos merecem mais do que desaparecer numa galeria.</p>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/10.jpeg" alt="" loading="lazy">
+      <p class="post-caption">Paris morgan</p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">estampa favorita</span>
+      <span class="card-value">oncinha</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/11.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post">
+      <img src="assets/images/12.jpeg" alt="" loading="lazy">
+      <p class="post-caption">duas demãos, sempre</p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">Cor favorita dele</span>
+      <span class="card-value">roxo</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/13.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post">
+      <img src="assets/images/1.jpeg" alt="" loading="lazy">
+      <p class="post-caption">pequenas memórias, guardadas</p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">humor do momento</span>
+      <span class="card-value">leve e apaixonada</span>
+    </div>
+
+    <div class="post">
+      <img src="assets/images/2.jpeg" alt="" loading="lazy">
+          <p class="post-caption">sem planos, os melhores planos</p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">pequenas coisas</span>
+      <span class="card-value">Mineirinho, musicas, Maquiagem</span>
+    </div>
+
+    <!-- ---------- divisor sutil: início das fotos "nós" ---------- -->
+    <div class="mural-divider mural-divider--us">
+      <span>nós, também</span>
+    </div>
+
+    <div class="post post--us">
+      <img src="assets/images/3.jpeg" alt="" loading="lazy">
+      <p class="post-caption"></p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">pessoa favorita</span>
+      <span class="card-value">Pedro</span>
+    </div>
+
+    <div class="post post--us">
+      <img src="assets/images/4.jpeg" alt="" loading="lazy">
+    </div>
+
+    <div class="post post--us">
+      <img src="assets/images/14.jpeg" alt="" loading="lazy">
+      <p class="post-caption">caminhada aleatória, a melhor até agora</p>
+    </div>
+
+    <div class="post card">
+      <span class="card-label">destino dos sonhos</span>
+      <span class="card-value">Morar na Praia</span>
+    </div>
+
+    <div class="post post--us video">
+      <video autoplay muted loop playsinline poster="assets/images/video-poster-001.jpg">
+        <source src="assets/videos/001.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="post post--us">
+      <img src="assets/images/15.jpeg" alt="" loading="lazy">
+      <p class="post-caption">ainda minha pessoa favorita pra me perder junto</p>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       OUR SONG — player minimalista via embed oficial do Spotify.
+       Sem chave de API, sem backend: o iframe abaixo é o player
+       oficial do Spotify, ajustado para caber na identidade do site.
+
+       PARA TROCAR A MÚSICA:
+       1. Abra a música no Spotify → Compartilhar → Copiar link do episódio/música
+       2. Pegue o ID que vem depois de "/track/" no link
+          (ex.: https://open.spotify.com/track/ESSE_ID_AQUI)
+       3. Substitua ESSE_ID_AQUI na URL do src abaixo.
+       ============================================================ -->
+  <section class="song-section" id="song">
+    <p class="section-eyebrow">nossa música</p>
+    <h2 class="song-title">a música que é nossa</h2>
+
+    <div class="song-frame">
+      <iframe
+        class="song-embed"
+        title="nossa música — player do spotify"
+        src="https://open.spotify.com/embed/track/555rmZC4fMJDkVavXReVf7?utm_source=generator"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy">
+      </iframe>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <span class="foot-mark"></span>
+    <p class="signature">
+      feito por alguém<br>que ama <b>cada versão</b> de você. <br> Pparavidino
+    </p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
