@@ -1,4 +1,4 @@
-# toyalimalvl — diário visual
+# toyalimalvl — diário visual --
 
 Um diário visual pessoal, feito à mão para a Letícia. Não é uma rede social —
 é um mural, um scrapbook moderno, um editorial guardado a dois cliques de distância.
